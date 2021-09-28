@@ -1,19 +1,25 @@
 <template>
   <div id="app">
       <Header/>
+      <AddUser/>
       <ListUser/>
+      <EditUser/>
   </div>
 </template>
 
 <script>
-import ListUser from './page/ListUser.vue'
-import Header from './components/Header.vue'
+import AddUser from './page/AddUser.vue'
+import ListUser from './page/ListUser.vue';
+import EditUser from './page/EditUser.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'App',
   components: {
     ListUser,
-    Header
+    AddUser,
+    Header,
+    EditUser
   }
 }
 </script>

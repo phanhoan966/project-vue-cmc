@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container form-horizontal">
     <h2>List user</h2>
-    <table class="table table-bordered">
-      <thead class="table-dark">
+    <table class="table table-bordered table-hover">
+      <thead class="table-success">
         <tr>
-          <th scope="col">Id</th>
+          <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
@@ -32,19 +32,7 @@
   </div>
 </template>
 <script>
-// nameUser: '',
-// emailUser: '',
-// phneUser: '',
-// adressUser: ''
 
-// const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDQFehzdEuRumzKzzzrtM7cFDqrBzEI1Pg`, {
-//     method: 'POST',
-//     body: JSON.stringify({
-//         email: payload.email,
-//         password: payload.password,
-//         returnSecureToken: true
-//     })
-// })
 export default {
   data() {
     return {
@@ -82,4 +70,14 @@ export default {
 };
 </script>
 <style>
+h2 { 
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
 </style>
