@@ -67,6 +67,7 @@ export default {
   },
   computed: {},
   methods: {},
+  
 };
 </script>
 <style>

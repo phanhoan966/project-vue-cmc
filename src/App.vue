@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <Login/>
       <Header/>
       <AddUser/>
       <ListUser/>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Login from './page/Login.vue'
 import AddUser from './page/AddUser.vue'
 import ListUser from './page/ListUser.vue';
 import EditUser from './page/EditUser.vue';
@@ -16,6 +18,7 @@ import Header from './components/Header.vue';
 export default {
   name: 'App',
   components: {
+    Login,
     ListUser,
     AddUser,
     Header,
