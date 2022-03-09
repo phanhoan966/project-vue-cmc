@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <form class="form-horizontal" role="form">
-      <h2>Edit user</h2>
+      <h2>Registration</h2>
       <div class="form-group row">
         <label for="firstName" class="col-sm-3 control-label">Full name</label>
         <div class="col-sm-9">
@@ -24,10 +24,10 @@
       <div class="form-group row">
         <label for="firstName" class="col-sm-3 control-label">Adress</label>
         <div class="col-sm-9">
-          <input type="text" id="adress" placeholder="Adress" class="form-control" autofocus>
+          <input type="text" id="adress" placeholder="Adress" class="form-control">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Edit</button>
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form> <!-- /form -->
   </div> <!-- ./container -->
 </template>
@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body {
     background-size: cover;
 }

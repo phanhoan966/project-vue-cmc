@@ -1,31 +1,12 @@
 <template>
   <div id="app">
-      <Login/>
-      <Header/>
-      <AddUser/>
-      <ListUser/>
-      <EditUser/>
+    <div id="nav">
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Login from './page/Login.vue'
-import AddUser from './page/AddUser.vue'
-import ListUser from './page/ListUser.vue';
-import EditUser from './page/EditUser.vue';
-import Header from './components/Header.vue';
-
-export default {
-  name: 'App',
-  components: {
-    Login,
-    ListUser,
-    AddUser,
-    Header,
-    EditUser
-  }
-}
-</script>
 
 <style>
 #app {
@@ -34,6 +15,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

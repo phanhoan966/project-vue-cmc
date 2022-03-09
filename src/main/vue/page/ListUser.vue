@@ -1,5 +1,8 @@
 <template>
   <div class="container form-horizontal">
+    <input type="text" v-model="firstName" />
+    <input type="text" v-model="lastname" />
+    <h2>{{ fullName }}</h2>
     <h2>List user</h2>
     <table class="table table-bordered table-hover">
       <thead class="table-success">
@@ -14,17 +17,26 @@
       </thead>
       <tbody>
         <tr v-for="(user, index) in listUser" :key="index">
-          <th scope="row">{{index + 1}}</th>
-          <td>{{user.nameUser}}</td>
-          <td>{{user.emailUser}}</td>
-          <td>{{user.phoneUser}}</td>
-          <td>{{user.adressUser}}</td>
+          <th scope="row">{{ index + 1 }}</th>
+          <td>{{ user.nameUser }}</td>
+          <td>{{ user.emailUser }}</td>
+          <td>{{ user.phoneUser }}</td>
+          <td>{{ user.adressUser }}</td>
           <td>
-            <i class="fas fa-user-plus text-success" style="cursor:pointer"></i>
+            <i
+              class="fas fa-user-plus text-success"
+              style="cursor: pointer"
+            ></i>
             &nbsp;
-            <i class="fas fa-user-edit text-primary" style="cursor:pointer"></i>
+            <i
+              class="fas fa-user-edit text-primary"
+              style="cursor: pointer"
+            ></i>
             &nbsp;
-            <i class="fas fa-user-minus text-danger" style="cursor:pointer"></i>
+            <i
+              class="fas fa-user-minus text-danger"
+              style="cursor: pointer"
+            ></i>
           </td>
         </tr>
       </tbody>
@@ -37,7 +49,14 @@ export default {
   data() {
     return {
       listUser: null,
+      firstName: '',
+      lastname: ''
     };
+  },
+  computed: {
+    fullName: function() {
+      return this.firstName + ' ' + this.lastname;
+    }
   },
   async created() {
     // const response = await fetch(`https://manager-user-faf76-default-rtdb.firebaseio.com/listUser.json`, {
@@ -65,14 +84,13 @@ export default {
     }
     this.listUser = arr;
   },
-  computed: {},
   methods: {},
   
 };
 </script>
-<style>
-h2 { 
-  font-family: 'Open Sans' , sans-serif;
+<style scoped>
+h2 {
+  font-family: "Open Sans", sans-serif;
   font-size: 40px;
   font-weight: 600;
   color: #000000;

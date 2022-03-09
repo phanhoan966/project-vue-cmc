@@ -17,8 +17,10 @@
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+            <router-link class="underlineHover btn btn-primary btn-block" to="/user/edit-user">Forgot Password?</router-link>
+            <router-link class="underlineHover btn btn-primary btn-block" to="/user/add-user">add user</router-link>
         </div>
+        <!-- <router-link to="/user/edit-user">About</router-link> -->
 
     </div>
 </div>
@@ -73,7 +75,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 html {
     background-color: #56baed;
 }
