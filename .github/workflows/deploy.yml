@@ -28,15 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Npm Install Package
         run: npm install
-        
-      - name: Test & Code Coverage
-        run: npm test -- --coverage
-      
-      - name: Upload Code Coverage
-        uses: codacy/codacy-coverage-reporter-action@v1.3.0
-        with:
-          token: ${{ secrets.CODECOV_TOKEN}}
-      
+
       - name: Build Package
         env:
           CI: false
