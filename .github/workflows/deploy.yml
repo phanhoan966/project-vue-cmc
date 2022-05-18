@@ -32,4 +32,4 @@ jobs:
       - name: Build Package
         env:
           CI: false
-        run: npm run serve
+        run: npm run build
